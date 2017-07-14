@@ -26,8 +26,8 @@ import re
 agenda = []
 date = []
 
-@respond_to('__help')
-@respond_to('_h')
+@respond_to('--help')
+@respond_to('-h')
 @respond_to('ヘルプ')
 def mention_func(message):
     message.send("ミーティングを設定： => 設定します")
