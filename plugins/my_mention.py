@@ -26,6 +26,14 @@ import re
 agenda = []
 date = []
 
+@respond_to('__help')
+@respond_to('_h')
+@respond_to('ヘルプ')
+def mention_func(message):
+    message.send("ミーティングを設定： => 設定します")
+    message.send("追加： => 議題を追加します")
+    message.send("アジェンダ表示 => 一覧を表示します")
+
 @respond_to('アジェンダ表示')
 def mention_func(message):
     message.reply(date[1] + "のミーティングアジェンダです")
